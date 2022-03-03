@@ -7,17 +7,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyCounterComponent } from './my-counter/my-counter.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './counter.reducer';
+
 @NgModule({
   declarations: [
     AppComponent,
-    MyCounterComponent
+    MyCounterComponent,
     SearchBarComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    StoreModule.forRoot({ count: counterReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]
