@@ -6,17 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent implements OnInit {
+  searchStr: string;
 
   constructor() {
-
-   }
+    this.searchStr = "";
+  }
 
   ngOnInit(): void {
   }
 
-  test() {
-    let a = 2;
-    console.log(a);
+  searchMusic() {
+    console.log(this.searchStr);
+    
   }
 
 }
