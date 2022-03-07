@@ -7,10 +7,17 @@ export const initialState: Array<Song> = [];
  
 const _songReducer = createReducer(
   initialState,
-  on(myActions.increment, (state) => state),
-  on(myActions.decrement, (state) => state),
   on(myActions.reset, (state) => []),
-  on(myActions.custom, (state, action) => [...state, action.addon])
+  on(myActions.addSong, (state, action) => [...state, action.songToAdd]),
+  on(myActions.removeSong, (state, action) => {
+    let stateCopy = [...state];
+    const index =  stateCopy.map(e => e.track).indexOf(action.songToRemove.track, 0);
+    if (index > -1) {
+       stateCopy.splice(index, 1);
+      }
+    return stateCopy;
+    } 
+  )
 );
  
 export function songReducer(state: Array<Song> | undefined, action: Action) {
