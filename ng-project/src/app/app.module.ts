@@ -10,11 +10,9 @@ import { AlbumsComponent } from './albums/albums.component';
 
 import { MyCounterComponent } from './my-counter/my-counter.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
-import { FormsModule } from '@angular/forms';
-
 
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './counter.reducer';
+import { songReducer } from './state/song.reducer';
 
 @NgModule({
   declarations: [
@@ -29,9 +27,7 @@ import { counterReducer } from './counter.reducer';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    FormsModule,
-
-    StoreModule.forRoot({ count: counterReducer })
+    StoreModule.forRoot({ song: songReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]

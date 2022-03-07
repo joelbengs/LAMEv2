@@ -21,7 +21,6 @@ export class SearchBarComponent implements OnInit {
   clientId = '9d4736d22394473c92fa72cebcd4f9d8';
   clientSecret = '0262845f4af74aaab6caebd7e4f03f84';
 searchString: String | undefined;
-  constructor() {
 
   constructor(private service: SpotifyService) {
     
@@ -36,8 +35,4 @@ searchString: String | undefined;
     let artists = await this.service.getArtists(token, this.searchStr);
     this.service.searchMusic(this.searchStr);
     }
-  searchMusic() {
-    console.log(this.searchString);
-  }
-
 }
