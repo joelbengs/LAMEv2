@@ -1,2 +1,7 @@
 <p>search-bar works!</p>
-<button > </button> 
+
+<form>
+    <div>
+        <input type = "text" placeholder ="artist name..." name="searchString" [(ngModel)] = "searchString" (keyup)="searchMusic()" >
+    </div>
+</form>
