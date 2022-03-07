@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormControl, FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,12 +16,12 @@ import { counterReducer } from './counter.reducer';
   declarations: [
     AppComponent,
     MyCounterComponent,
-    SearchBarComponent
-
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({ count: counterReducer })
   ],

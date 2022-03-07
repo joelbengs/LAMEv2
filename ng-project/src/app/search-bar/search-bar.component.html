@@ -1,7 +1,16 @@
 
+
 <h1>Search-bar works!</h1>
 <form>
     <div>
-        <input type="text" name="searchStr"  (keyup) = "searchMusic()" placeholder="Search an artist..."> 
+        <input type="text" [(ngModel)] = "searchStr" name="searchStr" (keyup) = "searchMusic()" placeholder="Search an artist..."> 
+        <ul>
+            <li >
+                Artist 1 
+            </li>
+            <li>
+                Artist 2
+            </li>
+        </ul>
     </div>
 </form>
