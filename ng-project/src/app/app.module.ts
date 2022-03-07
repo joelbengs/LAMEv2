@@ -8,6 +8,8 @@ import { AlbumsComponent } from './albums/albums.component';
 
 import { MyCounterComponent } from './my-counter/my-counter.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
+
 
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter.reducer';
@@ -15,7 +17,7 @@ import { counterReducer } from './counter.reducer';
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumsComponent
+    AlbumsComponent,
 
     MyCounterComponent,
     SearchBarComponent
@@ -25,6 +27,7 @@ import { counterReducer } from './counter.reducer';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
 
     StoreModule.forRoot({ count: counterReducer })
   ],
