@@ -1,9 +1,15 @@
-<p>my-counter works!</p>
+<p>My songs:</p>
 
-<button (click)="increment()">Increment</button>
+<button (click)="reset()">reset</button>
 
-<div>Current Count: {{ count$ | async }}</div>
+<button (click)="addSong({ track: 'mytrack1', artist: 'myartist1' })">Add a song</button>
+<button (click)="addSong({ track: 'mytrack2', artist: 'myartist2' })">Add a song</button>
+<button (click)="addSong({ track: 'mytrack3', artist: 'myartist3' })">Add a song</button>
 
-<button (click)="decrement()">Decrement</button>
+<button (click)="removeSong({ track: 'mytrack1', artist: 'myartist1' })">Remove the song mytrack1</button>
+<button (click)="removeSong({ track: 'mytrack2', artist: 'myartist2' })">Remove the song mytrack2</button>
+<button (click)="removeSong({ track: 'mytrack3', artist: 'myartist3' })">Remove the song mytrack3</button>
 
-<button (click)="reset()">Reset Counter</button>
+<div *ngFor="let song of song$ | async">
+  <p>{{song.track}} by {{song.artist}}</p>
+</div>
