@@ -2,10 +2,14 @@
 
 <button (click)="increment()">Increment</button>
 
-<div>Current String: {{ song$ | async }}</div>
+<!-- <div>Current String: {{ song$ | async }}</div> -->
+
+<div *ngFor="let song of song$ | async">
+  <p>{{song.track}}</p>
+</div>
 
 <button (click)="decrement()">Decrement</button>
 
 <button (click)="reset()">Reset Counter</button>
 
-<button (click)="custom('fromhtmlfile')">Add fromhtmlfile</button>
+<button (click)="custom({ track: 'mytrack', artist: 'myartist' })">Add a song</button>

@@ -1,16 +1,18 @@
 import { Action, createReducer, on, props } from '@ngrx/store';
 import * as myActions from './song.actions';
+import { Song } from '../models/song.model';
  
-export const initialState = "myString";
+//intial state has the type ReadonlyArray<Song> and is an empty array, that only accepts songs as input
+export const initialState: Array<Song> = [];
  
 const _songReducer = createReducer(
   initialState,
-  on(myActions.increment, (state) => state + "increment"),
-  on(myActions.decrement, (state) => state + "decrement"),
-  on(myActions.reset, (state) => "reset"),
-  on(myActions.custom, (state, action) => action.addon )
+  on(myActions.increment, (state) => state),
+  on(myActions.decrement, (state) => state),
+  on(myActions.reset, (state) => []),
+  on(myActions.custom, (state, action) => [...state, action.addon])
 );
  
-export function songReducer(state: string | undefined, action: Action) {
+export function songReducer(state: Array<Song> | undefined, action: Action) {
   return _songReducer(state, action);
 }
