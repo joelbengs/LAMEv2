@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent implements OnInit {
-
+searchString: String | undefined;
   constructor() {
 
    }
@@ -14,9 +14,8 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  test() {
-    let a = 2;
-    console.log(a);
+  searchMusic() {
+    console.log(this.searchString);
   }
 
 }
