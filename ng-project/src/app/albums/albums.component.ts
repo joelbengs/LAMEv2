@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
+
 
 @Component({
   selector: 'app-albums',
@@ -6,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./albums.component.css']
 })
 export class AlbumsComponent implements OnInit {
-
-  constructor() { }
+  name: string = "artistens namn/id";
+  constructor(private route: ActivatedRoute) { 
+  }
 
   ngOnInit(): void {
-  }
+    }
 
   
 
 }
+
