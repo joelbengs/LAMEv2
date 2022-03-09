@@ -30,7 +30,7 @@ import { ViewAlbumComponent } from './view-album/view-album.component';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({ song: songReducer })
+    StoreModule.forRoot({ playlist: songReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,10 +11,10 @@ import * as Actions from '../state/song.actions';
 })
 export class MyCounterComponent implements OnInit {
 
-  song$: Observable<Array<Song>>;
+  playlist$: Observable<Array<Song>>;
  
-  constructor(private store: Store<{ song: Array<Song> }>) {
-    this.song$ = store.select('song');
+  constructor(private store: Store<{ playlist: Array<Song> }>) {
+    this.playlist$ = store.select('playlist');
   }
  
   reset() {
