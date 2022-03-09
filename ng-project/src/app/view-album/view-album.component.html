@@ -5,15 +5,23 @@
 </div>
 
 <div>
-
-
     <p *ngIf="this.artist">Artist: {{artist}}</p>
     <p *ngIf="this.albumName">Album: {{albumName}}</p>
     <p *ngIf="this.releaseDate">Release Date: {{releaseDate}}</p>
+    <p *ngIf="this.numberOfTracks">Number of tracks: {{numberOfTracks}}</p>
+    <p *ngIf="this.label">Label: {{label}}</p>
+
+
+</div>
+
+<div *ngIf="this.tracks" >
+    <div *ngFor="let track of tracks" >
+        <p>{{track.track_number}} - {{this.artist}} - {{track.name}} - duration: {{this.durationCalc(track.duration_ms)}} </p>
+    </div>
 </div>
 
 <div *ngIf="this.images" >
     <div *ngFor="let image of images" >
-    <img src="{{image.url}}" height="image.height" width="image.width" />
-</div>
+        <img src="{{image.url}}" height="image.height" width="image.width" />
+    </div>
 </div>
