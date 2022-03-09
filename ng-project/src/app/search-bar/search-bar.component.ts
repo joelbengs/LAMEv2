@@ -4,7 +4,6 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { SpotifyService } from '../services/search-service';
 
-
 @Component({
   selector: 'search-bar',
   templateUrl: './search-bar.component.html',
