@@ -3,3 +3,9 @@
 <div>
     <button (click)="getAlbum()" >Press for Geography in the console</button>
 </div>
+
+<div>
+    <p *ngIf="this.artist">{{artist}}</p>
+    <p *ngIf="this.albumName">{{albumName}}</p>
+    <p></p>
+</div>
