@@ -17,8 +17,11 @@
 <div *ngIf="this.tracks" >
     <div *ngFor="let track of tracks" >
         <p>{{track.track_number}} - {{this.artist}} - {{track.name}} - duration: {{this.durationCalc(track.duration_ms)}} </p>
+        <button (click)="addSong({ track: track.name, artist: this.artist })">Add song to playlist</button>
+        <button (click)="removeSong({ track: track.name, artist: this.artist })">Remove song from playlist if present</button>
     </div>
 </div>
+
 
 <div *ngIf="this.images" >
     <div *ngFor="let image of images" >
