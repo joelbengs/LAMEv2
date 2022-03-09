@@ -21,7 +21,7 @@ export class ViewPlaylistComponent implements OnInit {
   reset() {
     this.store.dispatch(Actions.reset());
   }
- 
+
   removeSong(songToRemove: Song) {
     this.store.dispatch(Actions.removeSong({songToRemove: songToRemove}));
   }
