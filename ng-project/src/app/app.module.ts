@@ -6,6 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlbumsComponent } from './albums/albums.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+
 
 import { MyCounterComponent } from './my-counter/my-counter.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
@@ -32,6 +36,8 @@ import { ViewPlaylistComponent } from './view-playlist/view-playlist.component';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
     StoreModule.forRoot({ playlist: songReducer })
   ],
   providers: [],
