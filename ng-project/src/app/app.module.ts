@@ -13,14 +13,15 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 
 import { StoreModule } from '@ngrx/store';
 import { songReducer } from './state/song.reducer';
+import { ViewAlbumComponent } from './view-album/view-album.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlbumsComponent,
-
     MyCounterComponent,
     SearchBarComponent,
+    ViewAlbumComponent,
   ],
   imports: [
     BrowserModule,
