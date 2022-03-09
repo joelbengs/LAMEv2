@@ -13,9 +13,7 @@
 </div>
 
 <div *ngIf="this.images" >
-    <img src="images.url" height="images.height" width="images.width" />
+    <div *ngFor="let image of images" >
+    <img src="{{image.url}}" height="image.height" width="image.width" />
 </div>
-<!-- 
-<div *ngFor="let image og images">
-    <img src="image.url" height="image.height" width="image.width" />
-</div> -->
+</div>
