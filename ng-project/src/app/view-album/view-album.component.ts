@@ -16,11 +16,13 @@ export class ViewAlbumComponent implements OnInit {
   artist: String;
   albumName: String;
   releaseDate: String;
+  images: any;
 
   constructor(private service: AlbumService) { 
     this.artist="";
     this.albumName="";
     this.releaseDate="";
+    this.images="";
   }
 
   ngOnInit(): void {
@@ -29,10 +31,15 @@ export class ViewAlbumComponent implements OnInit {
   async getAlbum() {
     let token = await this.service.getToken(this.clientId, this.clientSecret);
     let album = await this.service.getAlbum(token, this.albumID);
-    this.artist = album.artist;
-    console.log
+    this.artist = album.artists[0].name;
     this.albumName = album.name;
     this.releaseDate = album.release_date;
+    this.images=album.images[0];
+    console.dir(this.images);
+
+    console.log("artist: " + this.artist);
+    console.log("albumname: " + this.albumName);
+    console.log("releasedate : " + this.releaseDate);
     console.dir(album);
   }
 
