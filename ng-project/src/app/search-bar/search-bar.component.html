@@ -1,22 +1,11 @@
-
-
 <h1>Search-bar works!</h1>
 <form>
     <div>
         <input type="text" [(ngModel)] = "searchStr" name="searchStr" (keyup) = "searchMusic()" placeholder="Search an artist..."> 
+    </div>
         <ul>
-            <li >
-                Artist 1 
-            </li>
-            <li>
-                Artist 2
-            </li>
+            <div *ngFor = "let name of this.artistName">
+                <a routerLink="/albums" routerLinkActive="active"> {{name}}</a>
+            </div>
         </ul>
 
-<p>search-bar works!</p>
-
-<form>
-    <div>
-        <input type = "text" placeholder ="artist name..." name="searchString" [(ngModel)] = "searchString" (keyup)="searchMusic()" >
-    </div>
-</form>
