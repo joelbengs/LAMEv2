@@ -3,3 +3,17 @@
 <div>
     <button (click)="getAlbum()" >Press for Geography in the console</button>
 </div>
+
+<div>
+
+
+    <p *ngIf="this.artist">Artist: {{artist}}</p>
+    <p *ngIf="this.albumName">Album: {{albumName}}</p>
+    <p *ngIf="this.releaseDate">Release Date: {{releaseDate}}</p>
+</div>
+
+<div *ngIf="this.images" >
+    <div *ngFor="let image of images" >
+    <img src="{{image.url}}" height="image.height" width="image.width" />
+</div>
+</div>
