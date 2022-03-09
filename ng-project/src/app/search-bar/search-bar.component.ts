@@ -3,7 +3,6 @@ import { SpotifyService } from '../services/search-service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 
-
 @Component({
   selector: 'search-bar',
   templateUrl: './search-bar.component.html',
