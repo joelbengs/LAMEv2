@@ -33,11 +33,4 @@ export class SpotifyService {
         return data.artists.items;
     }
 
-    searchMusic(searchStr: any) {
-        //let artist = "kayne";
-        //let searchUrl = "https://api.spotify.com/v1/search?q=" + "include_groups=album" + artist;
-        //let artists = this.http.get("https://api.spotify.com/v1/search?q=" + artist + "&type=artist");
-        //console.log(artists);
-        //let response = this._http.get(searchUrl + "&type=artist");
-    }
 }
