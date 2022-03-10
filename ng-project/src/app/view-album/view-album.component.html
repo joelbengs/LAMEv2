@@ -1,3 +1,10 @@
+
+<h1>Album: </h1>
+
+<div>
+    <button (click)="getAlbum()" >Press to make a fetch call for the album! Check the console for more info</button>
+</div>
+
 <div>
     <p *ngIf="this.artist">Artist: {{artist}}</p>
     <p *ngIf="this.albumName">Album: {{albumName}}</p>
@@ -11,8 +18,11 @@
 <div *ngIf="this.tracks" >
     <div *ngFor="let track of tracks" >
         <p>{{track.track_number}} - {{this.artist}} - {{track.name}} - duration: {{this.durationCalc(track.duration_ms)}} </p>
+        <button (click)="addSong({ track: track.name, artist: this.artist })">Add song to playlist</button>
+        <button (click)="removeSong({ track: track.name, artist: this.artist })">Remove song from playlist if present</button>
     </div>
 </div>
+
 
 <div *ngIf="this.images" >
     <div *ngFor="let image of images" >

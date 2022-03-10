@@ -1,0 +1,8 @@
+<h1>Your Playlist</h1>
+
+<div *ngFor="let song of playlist$ | async" >
+    <p>{{song.track}} by {{song.artist}}</p>
+    <button mat-raised-button color="accent" (click)="removeSong({ track: song.track, artist: song.artist })">Remove</button>
+</div>
+
+<button mat-raised-button color="warn" (click)="reset()" >Empty playlist</button>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AlbumService } from '../services/album-service';
 import { Song } from '../models/song.model';
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import * as Action from '../state/song.actions'
 
 @Component({
   selector: 'app-view-album',
@@ -10,20 +13,27 @@ import { Song } from '../models/song.model';
 })
 export class ViewAlbumComponent implements OnInit {
 
+  //Storage
+  playlist$: Observable<Array<Song>>;
 
+  //Access and albumID
   clientId: String = '9d4736d22394473c92fa72cebcd4f9d8';
   clientSecret: String = '0262845f4af74aaab6caebd7e4f03f84';
   albumID: String = "5duyQokC4FMcWPYTV9Gpf9";
  
-  artist: String;
-  albumName: String;
-  releaseDate: String;
-  label: String;
+  //Local varaibles for viewing in html
+  artist: string;
+  albumName: string;
+  releaseDate: string;
+  label: string;
   numberOfTracks: Number;
   tracks: Array<any>;
   images: Array<any>;
 
-  constructor(private service: AlbumService) { 
+  constructor(private service: AlbumService, private store: Store<{ playlist: Array<Song> }>) { 
+    //subscribes the local variable "playlist$" to the global storage "playlist" (an observable)
+    this.playlist$ = store.select('playlist');
+
     this.artist = "";
     this.albumName = "";
     this.releaseDate = "";
@@ -33,7 +43,12 @@ export class ViewAlbumComponent implements OnInit {
     this.images = [];
   }
 
-  ngOnInit(): void {
+  addSong(songToAdd: Song) {
+    this.store.dispatch(Action.addSong({songToAdd: songToAdd}));
+  }
+
+  removeSong(songToRemove: Song) {
+    this.store.dispatch(Action.removeSong({songToRemove: songToRemove}));
   }
 
   async getAlbum() {
@@ -57,5 +72,8 @@ export class ViewAlbumComponent implements OnInit {
     let minutes = Math.floor(seconds/60)
     let secondsleft = Math.round(seconds - minutes * 60);
     return minutes + "." + secondsleft;
-  } 
+  }
+
+  ngOnInit(): void {
+  }
 }
