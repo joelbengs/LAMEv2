@@ -4,17 +4,19 @@
 
 <div class="album-container">
 
-<mat-grid-list cols="5" rowHeight="1:1">
+<mat-grid-list cols="4" rowHeight="1:1">
 
 <div *ngFor ="let album of this.myDiscography">
 
 <div class="album-display">
   <mat-grid-tile>
     <img routerLink="/view-album/{{album.id}}" routerLinkActive="active" src="{{album.imgUrl}}" height="150" width="150" />
-    <p routerLink="/view-album/{{album.id}}" routerLinkActive="active">Album: {{album.name}}</p>
-    <p>Artist: {{album.artist}}</p>
-    <p>Release Date: {{album.releaseDate}}</p>
-  </mat-grid-tile>
+    <div class="album-info" routerLink="/view-album/{{album.id}}" routerLinkActive="active">
+    <p>{{album.name}}</p>
+    <p class="release-date">Released {{album.releaseDate}}</p>
+
+    </div>
+</mat-grid-tile>
 </div>
 
 </div>
