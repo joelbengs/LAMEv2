@@ -8,8 +8,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlbumsComponent } from './albums/albums.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+
+import {MatSelectModule} from '@angular/material/select';
+
 import { MatGridListModule } from '@angular/material/grid-list';
 
 
@@ -41,8 +44,9 @@ import { ViewPlaylistComponent } from './view-playlist/view-playlist.component';
     MatButtonModule,
     MatToolbarModule,
     MatInputModule,
-    MatGridListModule,
     MatIconModule,
+    MatSelectModule,
+    MatGridListModule,
     StoreModule.forRoot({ playlist: songReducer })
   ],
   providers: [],

@@ -7,11 +7,14 @@
         font-weight: 900;
         letter-spacing: -.04em;
         visibility: visible;
-
 }
 
 .mat-grid-tile{
   background: gray;
+}
+
+.album-img{
+  cursor: pointer;
 }
 
 
