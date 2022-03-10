@@ -10,7 +10,7 @@
 
 <div class="album-display">
   <mat-grid-tile>
-    <img routerLink="/view-album/{{album.id}}" routerLinkActive="active" src="{{album.imgUrl}}" height="150" width="150" />
+    <img class="album-img" routerLink="/view-album/{{album.id}}" routerLinkActive="active" src="{{album.imgUrl}}" height="150" width="150" />
     <div class="album-info" routerLink="/view-album/{{album.id}}" routerLinkActive="active">
     <p>{{album.name}}</p>
     <p class="release-date">Released {{album.releaseDate}}</p>

@@ -1,20 +1,21 @@
-<h1>Search an artist</h1>
+<body>
+<h1 class="title">Search for an artist</h1>
 
-<div>
 <form class ="search-field">
-    <mat-form-field class="search-field" appearance="fill">
+    <mat-form-field class="search-field" hintLabel="Search artist name" appearance="fill">
     <mat-label>Search</mat-label>
-    <input matInput placeholder="Search an artist..." type="text" [(ngModel)] = "searchStr" name="searchStr" (keyup) = "searchMusic()"> 
+    <input matInput placeholder="Search an artist..." type="text" [(ngModel)] = "searchStr" name="searchStr" (keyup) = "searchMusic()">
     <button matSuffix mat-icon-button aria-label="Clear" (click)="searchStr=''">
          <mat-icon>close</mat-icon>
     </button>
 </mat-form-field>
 </form>
-</div>
 
+<div class="searchResults">
 <ul>
     <div *ngFor = "let artist of this.myArtists">
         <a routerLink= "/discography/{{artist.id}}" routerLinkActive="active"> {{artist.name}}</a>
     </div>
 </ul>
-
+</div>
+</body>

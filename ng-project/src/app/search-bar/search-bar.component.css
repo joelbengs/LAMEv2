@@ -1,5 +1,20 @@
+body{
+  text-align:center;
+}
+
+.title{
+  text-align: center;
+  padding: 0.08em 0px;
+        font-size: 70px;
+        color: black;
+        line-height: 96px;
+        font-weight: 900;
+        letter-spacing: -.04em;
+        visibility: visible;
+}
+
 .search-field {
-  display: block;
+  display: inline-block;
   min-width: 150px;
   max-width: 500px;
   width: 100%;
