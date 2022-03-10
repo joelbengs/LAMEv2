@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap} from '@angular/router';
 
 
 @Component({
@@ -8,11 +8,12 @@ import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
   styleUrls: ['./albums.component.css']
 })
 export class AlbumsComponent implements OnInit {
-  name: string = "artistens namn/id";
-  constructor(private route: ActivatedRoute) { 
+
+  constructor(private router: ActivatedRoute) { 
   }
 
   ngOnInit(): void {
+     console.log(this.router.snapshot.params)
     }
 
   
