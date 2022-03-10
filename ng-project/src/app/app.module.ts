@@ -11,7 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 
-
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { MyCounterComponent } from './my-counter/my-counter.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
@@ -42,7 +42,9 @@ import { ViewPlaylistComponent } from './view-playlist/view-playlist.component';
     MatToolbarModule,
     MatInputModule,
     MatIconModule,
-    StoreModule.forRoot({ playlist: songReducer })
+    
+    StoreModule.forRoot({ playlist: songReducer }),
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
