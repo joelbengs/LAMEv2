@@ -31,7 +31,6 @@ export class DiscographyComponent implements OnInit {
     let token = await this.service.getToken(this.clientId, this.clientSecret);
     let discography = await this.service.getDiscography(token, this.artistId);
     let discAlbums = discography.items;
-    console.dir(discAlbums);
     discAlbums.forEach((e: any) => this.myDiscography.push(
       new Album(
         e.name,
@@ -40,7 +39,7 @@ export class DiscographyComponent implements OnInit {
         e.images[1].url,
         e.release_date)
     ))
-    console.log(this.myDiscography)
+    console.dir(this.myDiscography);
     }
 
 }
