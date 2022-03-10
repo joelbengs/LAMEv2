@@ -1,26 +1,26 @@
-<mat-grid-list cols="2">
-
+<mat-grid-list cols="2" rowHeight="1:1">
     <!-- image -->
-    <mat-grid-tile>
-        <img src="{{images[0].url}}" height="400" width="400">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <img src="{{images[0].url}}" height="80%" width="auto">
     </mat-grid-tile>
 
     <!-- album info -->
-    <mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
         <div class="albumInfo">
             <h3>Album</h3>
             <h1>{{albumName}}</h1>
             <h2 *ngIf="this.artist">{{artist}}</h2>
             <p *ngIf="this.releaseDate">Release Date: {{releaseDate}}</p>
             <p *ngIf="this.numberOfTracks">Number of tracks: {{numberOfTracks}}</p>
-            <p *ngIf="this.label">Label: {{label}}</p>
-            
+            <p *ngIf="this.label">Label: {{label}}</p>  
         </div>
     </mat-grid-tile>
+</mat-grid-list>
 
-    <!-- tracks -->
-    <mat-grid-tile [colspan]="2">
-        <div>
+  <!-- tracks -->
+<mat-grid-list cols="2" rowHeight="fit" style="height: 2000px">
+    <mat-grid-tile [colspan]="2" >
+        <div class="trackListContainer">
             <div *ngFor="let track of tracks" class="tracklist">
                 <button (click)="addSong({ track: track.name, artist: this.artist })" mat-mini-fab color="accent" class="button" aria-label="Example icon button with a library add icon"><mat-icon>library_add</mat-icon></button>
                 <button *ngIf="added({ track: track.name, artist: this.artist })" mat-mini-fab color="warn" class="button" aria-label="Example icon button with a library add icon"><mat-icon>library_add</mat-icon></button>
@@ -28,6 +28,4 @@
             </div>
         </div>
     </mat-grid-tile>
-
-  </mat-grid-list>
-
+</mat-grid-list>

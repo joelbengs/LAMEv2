@@ -18,3 +18,9 @@ mat-grid-list {
     background-color:rgb(221, 255, 244);
     margin: 60px;
 }
+
+.flexbox{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}

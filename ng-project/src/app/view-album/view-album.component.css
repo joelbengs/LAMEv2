@@ -8,14 +8,24 @@
 
   mat-grid-tile {
     background: lightsalmon;
+    padding: 10px;
+    vertical-align: top;
   }
 
+  /* To make the tracks list below each other */
   .tracklist {
    display: flex;
    flex-direction: col;
   }
 
-  .button {
+  /* To make the tracklist appear immediately under the album cover */
+  .trackListContainer {
+    position: absolute;
+    top: 0px;
+  }
+
+  /* To give the add-buttons spacing around */ 
+ .button {
     margin-right: 20px;
     margin-left: 20px;
   }
