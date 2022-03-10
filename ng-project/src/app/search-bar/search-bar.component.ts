@@ -11,14 +11,14 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 
 export class SearchBarComponent implements OnInit {
-  
+
   searchStr = '';
   clientId = '9d4736d22394473c92fa72cebcd4f9d8';
   clientSecret = '0262845f4af74aaab6caebd7e4f03f84';
   artists: any = [];
   artistName: any = [];
   name: string = "hej";
-  
+
   constructor(private service: SpotifyService) {
   }
 

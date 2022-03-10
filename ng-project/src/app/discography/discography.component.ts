@@ -14,16 +14,29 @@ export class DiscographyComponent implements OnInit {
   clientSecret: String = '0262845f4af74aaab6caebd7e4f03f84';
   artistId: String = "06HL4z0CvFAxyc27GXpf02";
 
-  constructor(private service: AlbumService) { }
+  albumIds: String[];
+
+//For future
+  //artistId = (someservice).getArtistID();
+
+  constructor(private service: AlbumService) {
+    this.albumIds = [];
+   }
 
   ngOnInit(): void {
   }
 
   async getDiscography() {
+
     let token = await this.service.getToken(this.clientId, this.clientSecret);
     let discography = await this.service.getDiscography(token, this.artistId);
-    //let album = await this.service.getAlbum(token, this.albumID);
-    console.dir(discography);
+    //Get album ids and store them in albumIds array
+    for(var i = 0; i<discography.items.length; i++){
+    this.albumIds[i] = discography.items[i].id;
   }
+  //this.albumIds.forEach( element => console.log(element));
+  console.dir(discography);
+  return this.albumIds;
+}
 
 }
