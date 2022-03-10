@@ -1,7 +1,7 @@
-<mat-grid-list cols="1" rowHeight="20%" >
+<mat-grid-list cols="1" rowHeight="100px" >
     <!-- album info -->
     <mat-grid-tile class="heading" rowspan="1">Your Playlist</mat-grid-tile>
-    <mat-grid-tile rowspan="5">
+    <mat-grid-tile rowspan="6">
         <div>
             <div *ngFor="let song of playlist$ | async" class="tracklist">
                 <button (click)="removeSong({ track: song.track, artist: song.artist })" mat-mini-fab color="warn" class="button" aria-label="Example icon button with a remove icon"><mat-icon>remove</mat-icon></button>
@@ -16,4 +16,3 @@
     </mat-grid-tile>
     
   </mat-grid-list>
-
