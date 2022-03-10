@@ -81,6 +81,10 @@ export class ViewAlbumComponent implements OnInit {
     let seconds = duration/1000
     let minutes = Math.floor(seconds/60)
     let secondsleft = Math.round(seconds - minutes * 60);
+    if (secondsleft < 10) {
+      return minutes + "." + 0 + secondsleft;
+
+    }
     return minutes + "." + secondsleft;
   }
 
