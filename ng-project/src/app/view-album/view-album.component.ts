@@ -46,6 +46,7 @@ export class ViewAlbumComponent implements OnInit {
     this.numberOfTracks = 0;
     this.tracks = [];
     this.images = [];
+    
   }
 
   ngOnInit(): void {
@@ -72,9 +73,6 @@ export class ViewAlbumComponent implements OnInit {
     this.label = album.label;
     this.tracks = album.tracks.items;
     this.images = album.images;
-
-    //to be removed
-    console.dir(this.tracks);
     console.dir(album);
   }
 
@@ -93,10 +91,7 @@ export class ViewAlbumComponent implements OnInit {
     let secondsleft = Math.round(seconds - minutes * 60);
     if (secondsleft < 10) {
       return minutes + "." + 0 + secondsleft;
-
     }
     return minutes + "." + secondsleft;
-  }
-
-  
+  }  
 }

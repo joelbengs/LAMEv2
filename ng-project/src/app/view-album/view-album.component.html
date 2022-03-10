@@ -22,9 +22,8 @@
     <mat-grid-tile [colspan]="2" >
         <div class="trackListContainer">
             <div *ngFor="let track of tracks" class="tracklist">
-                <button (click)="addSong({ track: track.name, artist: this.artist })" mat-mini-fab color="accent" class="button" aria-label="Example icon button with a library add icon"><mat-icon>library_add</mat-icon></button>
-                <button *ngIf="added({ track: track.name, artist: this.artist })" mat-mini-fab color="warn" class="button" aria-label="Example icon button with a library add icon"><mat-icon>library_add</mat-icon></button>
-                <h2>{{track.track_number}} - {{this.artist}} - {{track.name}} - duration: {{this.durationCalc(track.duration_ms)}} </h2>
+                <button (click)="addSong({ track: track.name, artist: this.artist, album: this.albumName, duration: this.durationCalc(track.duration_ms) })" mat-mini-fab color="accent" class="button" aria-label="Example icon button with a library add icon"><mat-icon>library_add</mat-icon></button>
+                <h2>{{track.track_number}} - {{this.artist}} - {{track.name}} - {{this.durationCalc(track.duration_ms)}} </h2>
             </div>
         </div>
     </mat-grid-tile>

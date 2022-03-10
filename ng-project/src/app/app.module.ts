@@ -8,15 +8,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlbumsComponent } from './albums/albums.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-
-import {MatSelectModule} from '@angular/material/select';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
 
-
-import { MyCounterComponent } from './my-counter/my-counter.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 
 import { StoreModule } from '@ngrx/store';
@@ -31,7 +27,6 @@ import { HomepageComponent } from './homepage/homepage.component';
   declarations: [
     AppComponent,
     AlbumsComponent,
-    MyCounterComponent,
     SearchBarComponent,
     DiscographyComponent,
     ViewAlbumComponent,

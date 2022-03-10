@@ -4,8 +4,8 @@
     <mat-grid-tile rowspan="4">
         <div class="trackListContainer">
             <div *ngFor="let song of playlist$ | async" class="tracklist">
-                <button (click)="removeSong({ track: song.track, artist: song.artist })" mat-mini-fab color="warn" class="button" aria-label="Example icon button with a remove icon"><mat-icon>remove</mat-icon></button>
-                <h2>{{song.track}} by {{song.artist}}</h2>
+                <button (click)="removeSong({ track: song.track, artist: song.artist, album: song.album, duration: song.duration })" mat-mini-fab color="warn" class="button" aria-label="Example icon button with a remove icon"><mat-icon>remove</mat-icon></button>
+                <h2>{{song.artist}} - {{song.track}} - Album: {{song.album}} - {{song.duration}}</h2>
             </div>            
         </div>
     </mat-grid-tile>
