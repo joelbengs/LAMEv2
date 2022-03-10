@@ -18,7 +18,9 @@ export class DiscographyComponent implements OnInit {
   artistId: string = "";
   myDiscography: Array<Album> = [];
 
-  constructor(private service: DiscographyService, private router: ActivatedRoute ) {}
+  constructor(private service: DiscographyService, private router: ActivatedRoute ) {
+    
+  }
 
   ngOnInit(): void {
     this.artistId = this.router.snapshot.params['id'];
@@ -27,11 +29,9 @@ export class DiscographyComponent implements OnInit {
   }
 
   async getDiscography() {
-
     let token = await this.service.getToken(this.clientId, this.clientSecret);
     let discography = await this.service.getDiscography(token, this.artistId);
     let discAlbums = discography.items;
-    console.dir(discAlbums);
     discAlbums.forEach((e: any) => this.myDiscography.push(
       new Album(
         e.name,
@@ -40,7 +40,7 @@ export class DiscographyComponent implements OnInit {
         e.images[1].url,
         e.release_date)
     ))
-    console.log(this.myDiscography)
+    console.dir(this.myDiscography);
     }
 
 }

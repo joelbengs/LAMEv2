@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../services/search-service';
 import { Artist } from '../models/artist';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'search-bar',
@@ -18,10 +18,11 @@ export class SearchBarComponent implements OnInit {
   myArtists: Array<Artist> = [];
 
 
-  constructor(private service: SpotifyService) {
+  constructor(private service: SpotifyService, private router: ActivatedRoute) {
   }
 
   ngOnInit(): void {
+    this.searchMusic();
   }
 
   async searchMusic() {
@@ -32,6 +33,5 @@ export class SearchBarComponent implements OnInit {
     artists.forEach(
       (element: any) => this.myArtists.push(new Artist(element.name, element.id))
     )
-
     }
   }
