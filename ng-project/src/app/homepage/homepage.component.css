@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+}
+
+.title {
+  margin-top: 50px;
+  padding: 0.08em 0px;
+  font-size: 70px;
+  color: #000b49;
+  line-height: 96px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  visibility: visible;
+}
+
+.subtitle {
+  margin-top: 50px;
+  padding: 0.08em 0px;
+  font-size: 35px;
+  color: #000b49;
+  line-height: 96px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  visibility: visible;
+}

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../services/search-service';
 import { Artist } from '../models/artist';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'search-bar',
@@ -17,8 +16,7 @@ export class SearchBarComponent implements OnInit {
   clientSecret = '0262845f4af74aaab6caebd7e4f03f84';
   myArtists: Array<Artist> = [];
 
-
-  constructor(private service: SpotifyService, private router: ActivatedRoute) {
+  constructor(private service: SpotifyService) {
   }
 
   ngOnInit(): void {

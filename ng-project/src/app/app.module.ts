@@ -25,6 +25,7 @@ import { songReducer } from './state/song.reducer';
 import { DiscographyComponent } from './discography/discography.component';
 import { ViewAlbumComponent } from './view-album/view-album.component';
 import { ViewPlaylistComponent } from './view-playlist/view-playlist.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ViewPlaylistComponent } from './view-playlist/view-playlist.component';
     DiscographyComponent,
     ViewAlbumComponent,
     ViewPlaylistComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
