@@ -78,6 +78,7 @@ export class ViewAlbumComponent implements OnInit {
     console.dir(album);
   }
 
+  //To be removed or worked on. ALSO REMOVE THE BUTTON IN HTML
   added(song: Song) {
  /*    const index = this.playlist$.map(e => e.track).indexOf(song.track, 0);
     if (index > -1) {
