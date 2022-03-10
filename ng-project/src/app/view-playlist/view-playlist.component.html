@@ -1,21 +1,19 @@
-<h1>Your Playlist</h1>
-
-
-
-<button mat-raised-button color="warn" (click)="reset()" >Empty playlist</button>
-<button mat-raised-button color="primary" (click)="reset()" >Empty playlist with different color</button>
-
-<mat-grid-list cols="1">
-
+<mat-grid-list cols="1" rowHeight="20%" >
     <!-- album info -->
-    <mat-grid-tile>
-        <div class="albumInfo">
-            <div *ngFor="let song of playlist$ | async" >
-                <p>{{song.track}} by {{song.artist}}</p>
-                <button mat-raised-button color="warn" (click)="removeSong({ track: song.track, artist: song.artist })">Remove</button>
+    <mat-grid-tile class="heading" rowspan="1">Your Playlist</mat-grid-tile>
+    <mat-grid-tile rowspan="5">
+        <div>
+            <div *ngFor="let song of playlist$ | async" class="tracklist">
+                <button (click)="removeSong({ track: song.track, artist: song.artist })" mat-mini-fab color="warn" class="button" aria-label="Example icon button with a remove icon"><mat-icon>remove</mat-icon></button>
+                <h2>{{song.track}} by {{song.artist}}</h2>
             </div>            
         </div>
     </mat-grid-tile>
-
+    <mat-grid-tile rowspan="1">
+        <div>
+            <button mat-raised-button color="warn" (click)="reset()" >Empty playlist</button>
+        </div>
+    </mat-grid-tile>
+    
   </mat-grid-list>
 
