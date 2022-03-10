@@ -8,7 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlbumsComponent } from './albums/albums.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 
 
 import { MyCounterComponent } from './my-counter/my-counter.component';
@@ -38,6 +39,8 @@ import { ViewPlaylistComponent } from './view-playlist/view-playlist.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
+    MatGridListModule,
+    MatIconModule,
     StoreModule.forRoot({ playlist: songReducer })
   ],
   providers: [],

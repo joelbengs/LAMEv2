@@ -1,0 +1,25 @@
+  .albumDiv {
+      display: block;
+  }
+  
+  .albumInfo {
+      text-align: left;
+      padding: 0.08em 0px;
+          color: black;
+          line-height: 20px;
+          letter-spacing: -.04em;
+  }
+
+  mat-grid-tile {
+    background: lightsalmon;
+  }
+
+  .mat-album-info {
+      float: left;
+  }
+
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }

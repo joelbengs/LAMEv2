@@ -1,25 +1,35 @@
+<mat-grid-list cols="2">
 
+    <!-- image -->
+    <mat-grid-tile>
+        <img src="{{images[0].url}}" height="300" width="300">
+    </mat-grid-tile>
 
- <div>
-    <img src="{{images[0].url}}" height="300" width="300">
-</div>
+    <!-- album info -->
+    <mat-grid-tile>
+        <div class="albumInfo">
+            <h3>Album</h3>
+            <h1>{{albumName}}</h1>
+            <h2 *ngIf="this.artist">{{artist}}</h2>
+            <p *ngIf="this.releaseDate">Release Date: {{releaseDate}}</p>
+            <p *ngIf="this.numberOfTracks">Number of tracks: {{numberOfTracks}}</p>
+            <p *ngIf="this.label">Label: {{label}}</p>
+            
+        </div>
+    </mat-grid-tile>
 
-<h1>Album: {{albumName}}</h1>
+    <!-- tracks -->
+    <mat-grid-tile [colspan]="2">
+            <div *ngFor="let track of tracks" >
+                <p>{{track.track_number}} - {{this.artist}} - {{track.name}} - duration: {{this.durationCalc(track.duration_ms)}} </p>
+                <div class="example-button-container">
+                    <button (click)="addSong({ track: track.name, artist: this.artist })" mat-fab color="accent" aria-label="Example icon button with a library add icon">
+                      <mat-icon>library_add</mat-icon>
+                    </button>
+                  </div>
+                <button (click)="removeSong({ track: track.name, artist: this.artist })">Remove song from playlist if present</button>
+            </div>
+    </mat-grid-tile>
 
-<div>
-    <p *ngIf="this.artist">Artist: {{artist}}</p>
-    <p *ngIf="this.releaseDate">Release Date: {{releaseDate}}</p>
-    <p *ngIf="this.numberOfTracks">Number of tracks: {{numberOfTracks}}</p>
-    <p *ngIf="this.label">Label: {{label}}</p>
-</div>
+  </mat-grid-list>
 
-<h2>Tracklist:</h2>
-
-<div *ngIf="this.tracks" >
-    <div *ngFor="let track of tracks" >
-        <p>{{track.track_number}} - {{this.artist}} - {{track.name}} - duration: {{this.durationCalc(track.duration_ms)}} </p>
-        <button (click)="addSong({ track: track.name, artist: this.artist })">Add song to playlist</button>
-        <button (click)="removeSong({ track: track.name, artist: this.artist })">Remove song from playlist if present</button>
-    </div>
-</div>
-   
