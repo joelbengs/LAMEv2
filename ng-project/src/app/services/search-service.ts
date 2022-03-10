@@ -29,7 +29,6 @@ export class SpotifyService {
         });
         const data = await result.json();
         data.artists.items.map((data: any) => console.log(data.name));
-        console.log(data.artists.items)
         return data.artists.items;
     }
 

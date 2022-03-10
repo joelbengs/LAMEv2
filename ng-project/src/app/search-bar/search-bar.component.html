@@ -1,11 +1,11 @@
-<h1>Search-bar works!</h1>
+<h1>Search an artist</h1>
 <form>
     <div>
         <input type="text" [(ngModel)] = "searchStr" name="searchStr" (keyup) = "searchMusic()" placeholder="Search an artist..."> 
     </div>
         <ul>
             <div *ngFor = "let artist of this.myArtists">
-                <a routerLink= "/albums/{{artist.id}}" routerLinkActive="active"> {{artist.name}}</a>
+                <a routerLink= "/discography/{{artist.id}}" routerLinkActive="active"> {{artist.name}}</a>
             </div>
         </ul>
 
