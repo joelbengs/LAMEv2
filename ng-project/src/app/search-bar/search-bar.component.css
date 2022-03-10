@@ -1,21 +1,21 @@
-body{
-  text-align:center;
+body {
+  text-align: center;
 }
 
-a{
+a {
   color: white;
   text-decoration: none !important;
 }
 
-.title{
+.title {
   text-align: center;
   padding: 0.08em 0px;
-        font-size: 70px;
-        color: #000B49;
-        line-height: 96px;
-        font-weight: 900;
-        letter-spacing: -.04em;
-        visibility: visible;
+  font-size: 70px;
+  color: #000b49;
+  line-height: 96px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  visibility: visible;
 }
 
 .search-field {
@@ -23,7 +23,7 @@ a{
   min-width: 150px;
   max-width: 500px;
   width: 100%;
-  color: #000B49;
+  color: #000b49;
 }
 
 .form-div {

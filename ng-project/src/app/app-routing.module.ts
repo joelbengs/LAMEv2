@@ -4,6 +4,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { DiscographyComponent } from './discography/discography.component';
 import { ViewAlbumComponent } from './view-album/view-album.component';
 import { ViewPlaylistComponent } from './view-playlist/view-playlist.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
 {path: "view-playlist",
@@ -13,7 +14,8 @@ component: ViewAlbumComponent},
 {path: 'discography/:id', 
 component: DiscographyComponent},
 {path: "search-bar",
-component: SearchBarComponent}
+component: SearchBarComponent},
+{path:"", component: HomepageComponent}
 
 ]; //sets up routes constant where you define your routes
 
