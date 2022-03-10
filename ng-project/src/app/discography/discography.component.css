@@ -1,0 +1,26 @@
+.discographyTitle{
+  text-align: center;
+  padding: 0.08em 0px;
+        font-size: 70px;
+        color: black;
+        line-height: 96px;
+        font-weight: 900;
+        letter-spacing: -.04em;
+        visibility: visible;
+
+}
+
+.mat-grid-list{
+  rowHeight: fit;
+}
+
+.mat-grid-tile{
+  background: white;
+}
+
+
+.album-display{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

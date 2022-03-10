@@ -1,14 +1,23 @@
-<div>
-<h1> {{this.myDiscography[0].artist}}'s discography</h1>
+<div class="album-tracks animated fadeIn" *ngIf="myDiscography != null">
+
+<h1 class="discographyTitle"> {{this.myDiscography[0].artist}}'s discography</h1>
+
+<div class="album-container">
+
+<mat-grid-list cols="5" rowHeight="1:1">
 
 <div *ngFor ="let album of this.myDiscography">
-    <img src="{{album.imgUrl}}" height="150" width="150" />
-    <p>Album: {{album.name}}</p>
-    <p>Artist: {{album.artist}}</p>
-    <p>Release Date: {{album.releaseDate}}</p>
-</div>
-
-</div>
     <div class="album-display">
-
+      <mat-grid-tile>
+      <img src="{{album.imgUrl}}" height="150" width="150" />
+      <p>Album: {{album.name}}</p>
+      <p>Artist: {{album.artist}}</p>
+      <p>Release Date: {{album.releaseDate}}</p>
+      </mat-grid-tile>
     </div>
+</div>
+</mat-grid-list>
+
+</div>
+
+</div>
