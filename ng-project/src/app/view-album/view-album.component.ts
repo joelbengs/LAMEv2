@@ -55,6 +55,7 @@ export class ViewAlbumComponent implements OnInit {
 
   addSong(songToAdd: Song) {
     this.store.dispatch(Action.addSong({songToAdd: songToAdd}));
+    alert("Song added to your playlist!");
   }
 
   removeSong(songToRemove: Song) {
@@ -77,10 +78,22 @@ export class ViewAlbumComponent implements OnInit {
     console.dir(album);
   }
 
+  added(song: Song) {
+ /*    const index = this.playlist$.map(e => e.track).indexOf(song.track, 0);
+    if (index > -1) {
+      return true;
+    }
+    return false; */
+  }
+
    durationCalc(duration: number) {
     let seconds = duration/1000
     let minutes = Math.floor(seconds/60)
     let secondsleft = Math.round(seconds - minutes * 60);
+    if (secondsleft < 10) {
+      return minutes + "." + 0 + secondsleft;
+
+    }
     return minutes + "." + secondsleft;
   }
 

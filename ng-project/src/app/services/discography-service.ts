@@ -21,7 +21,7 @@ export class DiscographyService {
         }
 
         getDiscography = async (token: any, artistID: any) =>{
-          let result = await fetch("https://api.spotify.com/v1/artists/" + artistID + "/albums?limit=5", {
+          let result = await fetch("https://api.spotify.com/v1/artists/" + artistID + "/albums?limit=20", {
             method: 'GET',
             headers: {
               'Content-Type' : 'application/json',

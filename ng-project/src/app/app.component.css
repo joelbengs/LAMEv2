@@ -12,6 +12,12 @@ section {
     center center fixed;
 }
 
+body {
+  background-color: #FFB5B5;
+  margin: auto;
+  font-family: "Times New Roman"
+  }
+
 .accent-button {
   display: table-cell;
   width: 490px;
@@ -21,4 +27,8 @@ section {
   display: table-cell;
   width: 100px;
   margin: 10px;
+}
+
+.mat-toolbar{
+  background-color: #000B49;
 }
