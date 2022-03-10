@@ -2,20 +2,25 @@
 <h1 class="title">Search for an artist</h1>
 
 <form class ="search-field">
-    <mat-form-field class="search-field" hintLabel="Search artist name" appearance="fill">
+    <mat-form-field class="search-field" appearance="fill">
     <mat-label>Search</mat-label>
     <input matInput placeholder="Search an artist..." type="text" [(ngModel)] = "searchStr" name="searchStr" (keyup) = "searchMusic()">
     <button matSuffix mat-icon-button aria-label="Clear" (click)="searchStr=''">
          <mat-icon>close</mat-icon>
     </button>
 </mat-form-field>
-</form>
 
-<div class="searchResults">
+<div class="search-results">
 <ul>
     <div *ngFor = "let artist of this.myArtists">
+      <mat-option value="">
         <a routerLink= "/discography/{{artist.id}}" routerLinkActive="active"> {{artist.name}}</a>
+      </mat-option>
     </div>
 </ul>
 </div>
+
+</form>
+
+
 </body>
