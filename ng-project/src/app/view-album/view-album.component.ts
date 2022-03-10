@@ -4,6 +4,7 @@ import { Song } from '../models/song.model';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import * as Action from '../state/song.actions'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view-album',
@@ -30,7 +31,11 @@ export class ViewAlbumComponent implements OnInit {
   tracks: Array<any>;
   images: Array<any>;
 
-  constructor(private service: AlbumService, private store: Store<{ playlist: Array<Song> }>) { 
+  constructor(
+    private service: AlbumService, 
+    private store: Store<{ playlist: Array<Song> }>,
+    private router: ActivatedRoute
+    ) { 
     //subscribes the local variable "playlist$" to the global storage "playlist" (an observable)
     this.playlist$ = store.select('playlist');
 
@@ -41,6 +46,11 @@ export class ViewAlbumComponent implements OnInit {
     this.numberOfTracks = 0;
     this.tracks = [];
     this.images = [];
+  }
+
+  ngOnInit(): void {
+    this.albumID = this.router.snapshot.params["id"];
+    this.getAlbum();
   }
 
   addSong(songToAdd: Song) {
@@ -74,6 +84,5 @@ export class ViewAlbumComponent implements OnInit {
     return minutes + "." + secondsleft;
   }
 
-  ngOnInit(): void {
-  }
+  
 }
