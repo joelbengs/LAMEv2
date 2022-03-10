@@ -1,16 +1,25 @@
+body{
+  background-color: #FFB5B5;
+}
+
+p{
+margin-top: -20px;
+}
+
 .discographyTitle{
   text-align: center;
   padding: 0.08em 0px;
-        font-size: 70px;
-        color: black;
-        line-height: 96px;
-        font-weight: 900;
-        letter-spacing: -.04em;
-        visibility: visible;
+  font-size: 70px;
+  color: #000B49;
+  line-height: 96px;
+  font-weight: 900;
+  letter-spacing: -.04em;
+  visibility: visible;
+  background-color: #FFB5B5;
 }
 
 .mat-grid-tile{
-  background: gray;
+  background: #FF7272;
 }
 
 .album-img{
@@ -24,13 +33,9 @@
   object-fit: cover;
 }
 
-p{
-margin-top: -20px;
-}
-
 .album-info{
   position: absolute;
   color: white;
   margin: 0;
-  bottom: 30px;
+  bottom: 5px;
 }
