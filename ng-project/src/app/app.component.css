@@ -13,9 +13,9 @@ section {
 }
 
 body {
-  background-color: #FFB5B5;
-  margin: auto;
-  }
+  background-color: #ffb5b5;
+  overflow: scroll;
+}
 
 .accent-button {
   display: table-cell;
@@ -28,6 +28,10 @@ body {
   margin: 10px;
 }
 
-.mat-toolbar{
-  background-color: #000B49;
+.mat-toolbar {
+  background-color: #000b49;
+}
+
+.text-span {
+  cursor: pointer;
 }
