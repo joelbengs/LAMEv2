@@ -10,6 +10,7 @@ import { Album } from '../models/album.model';
   styleUrls: ['./discography.component.css'],
   providers: [DiscographyService]
 })
+
 export class DiscographyComponent implements OnInit {
 
   clientId: string = '9d4736d22394473c92fa72cebcd4f9d8';
@@ -40,8 +41,6 @@ export class DiscographyComponent implements OnInit {
     ))
     console.log(this.myDiscography)
     
-   // discography.forEach = (element: any) => this.myDiscography.push(new Album(element.name, element.id))
-
     }
 
 }

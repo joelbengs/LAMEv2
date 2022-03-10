@@ -2,8 +2,8 @@
 <h1> {{this.myDiscography[0].artist}}'s discography</h1>
 
 <div *ngFor ="let album of this.myDiscography">
-    <img src="{{album.imgUrl}}" height="150" width="150" />
-    <p>Album: {{album.name}}</p>
+    <img routerLink="/view-album/{{album.id}}" routerLinkActive="active" src="{{album.imgUrl}}" height="150" width="150" />
+    <p routerLink="/view-album/{{album.id}}" routerLinkActive="active">Album: {{album.name}}</p>
     <p>Artist: {{album.artist}}</p>
     <p>Release Date: {{album.releaseDate}}</p>
 </div>

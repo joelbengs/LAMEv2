@@ -1,31 +1,11 @@
 <div>
-<a routerLink="/search-bar" routerLinkActive="active"> Search </a>
-<a routerLink="" routerLinkActive="active"> Playlist </a>
 
- <mat-toolbar><span>Spotiy Album Application</span></mat-toolbar>
+ <mat-toolbar><span> Spotiy Album Application </span>
+    <button class="tool-button" mat-raised-button color="accent" routerLink="" routerLinkActive="active">Search</button>
+    <button class="tool-button" mat-raised-button color="accent" routerLink="/view-playlist" routerLinkActive="active">Playlist</button>
+</mat-toolbar>
 
-<section>
-  <div class="accent-button">
-    <button mat-raised-button color="accent">Accent</button>
-  </div>
-</section>
-
-
-<div>
-  <search-bar>
-  </search-bar>
-</div>
-
-<div>
-  <app-view-playlist>
-  </app-view-playlist>
-</div>
-
-<div>
-  <app-view-album>
-  </app-view-album>
-
-</div>
+<search-bar> </search-bar>
 
 <div class="bgimg">
 
