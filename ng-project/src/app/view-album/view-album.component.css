@@ -1,7 +1,3 @@
-  .albumDiv {
-      display: block;
-  }
-  
   .albumInfo {
       text-align: left;
       padding: 0.08em 0px;
@@ -14,12 +10,12 @@
     background: lightsalmon;
   }
 
-  .mat-album-info {
-      float: left;
+  .tracklist {
+   display: flex;
+   flex-direction: col;
   }
 
-  .example-button-container {
-    display: flex;
-    justify-content: center;
-    width: 120px;
+  .button {
+    margin-right: 20px;
+    margin-left: 20px;
   }

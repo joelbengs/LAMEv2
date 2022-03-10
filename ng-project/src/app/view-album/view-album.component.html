@@ -2,7 +2,7 @@
 
     <!-- image -->
     <mat-grid-tile>
-        <img src="{{images[0].url}}" height="300" width="300">
+        <img src="{{images[0].url}}" height="400" width="400">
     </mat-grid-tile>
 
     <!-- album info -->
@@ -20,15 +20,13 @@
 
     <!-- tracks -->
     <mat-grid-tile [colspan]="2">
-            <div *ngFor="let track of tracks" >
-                <p>{{track.track_number}} - {{this.artist}} - {{track.name}} - duration: {{this.durationCalc(track.duration_ms)}} </p>
-                <div class="example-button-container">
-                    <button (click)="addSong({ track: track.name, artist: this.artist })" mat-fab color="accent" aria-label="Example icon button with a library add icon">
-                      <mat-icon>library_add</mat-icon>
-                    </button>
-                  </div>
-                <button (click)="removeSong({ track: track.name, artist: this.artist })">Remove song from playlist if present</button>
+        <div>
+            <div *ngFor="let track of tracks" class="tracklist">
+                <button (click)="addSong({ track: track.name, artist: this.artist })" mat-mini-fab color="accent" class="button" aria-label="Example icon button with a library add icon"><mat-icon>library_add</mat-icon></button>
+                <button *ngIf="added({ track: track.name, artist: this.artist })" mat-mini-fab color="warn" class="button" aria-label="Example icon button with a library add icon"><mat-icon>library_add</mat-icon></button>
+                <h2>{{track.track_number}} - {{this.artist}} - {{track.name}} - duration: {{this.durationCalc(track.duration_ms)}} </h2>
             </div>
+        </div>
     </mat-grid-tile>
 
   </mat-grid-list>
