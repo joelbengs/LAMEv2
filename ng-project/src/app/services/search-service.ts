@@ -29,15 +29,7 @@ export class SpotifyService {
         });
         const data = await result.json();
         data.artists.items.map((data: any) => console.log(data.name));
-        console.log(data.artists.items)
         return data.artists.items;
     }
 
-    searchMusic(searchStr: any) {
-        //let artist = "kayne";
-        //let searchUrl = "https://api.spotify.com/v1/search?q=" + "include_groups=album" + artist;
-        //let artists = this.http.get("https://api.spotify.com/v1/search?q=" + artist + "&type=artist");
-        //console.log(artists);
-        //let response = this._http.get(searchUrl + "&type=artist");
-    }
 }
