@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlbumsComponent } from './albums/albums.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -38,6 +40,8 @@ import { ViewPlaylistComponent } from './view-playlist/view-playlist.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
+    MatInputModule,
+    MatIconModule,
     StoreModule.forRoot({ playlist: songReducer })
   ],
   providers: [],
