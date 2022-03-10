@@ -13,8 +13,9 @@ section {
 }
 
 body {
-  background-color: gray;
+  background-color: #FFB5B5;
   margin: auto;
+  font-family: "Times New Roman"
   }
 
 .accent-button {
@@ -26,4 +27,8 @@ body {
   display: table-cell;
   width: 100px;
   margin: 10px;
+}
+
+.mat-toolbar{
+  background-color: #000B49;
 }
