@@ -12,6 +12,11 @@ section {
     center center fixed;
 }
 
+body {
+  background-color: gray;
+  margin: auto;
+  }
+
 .accent-button {
   display: table-cell;
   width: 490px;
