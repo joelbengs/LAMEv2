@@ -1,19 +1,19 @@
 
-<h1>Album: </h1>
 
-<div>
-    <button (click)="getAlbum()" >Press to make a fetch call for the album! Check the console for more info</button>
+ <div>
+    <img src="{{images[0].url}}" height="300" width="300">
 </div>
+
+<h1>Album: {{albumName}}</h1>
 
 <div>
     <p *ngIf="this.artist">Artist: {{artist}}</p>
-    <p *ngIf="this.albumName">Album: {{albumName}}</p>
     <p *ngIf="this.releaseDate">Release Date: {{releaseDate}}</p>
     <p *ngIf="this.numberOfTracks">Number of tracks: {{numberOfTracks}}</p>
     <p *ngIf="this.label">Label: {{label}}</p>
-
-
 </div>
+
+<h2>Tracklist:</h2>
 
 <div *ngIf="this.tracks" >
     <div *ngFor="let track of tracks" >
@@ -22,10 +22,4 @@
         <button (click)="removeSong({ track: track.name, artist: this.artist })">Remove song from playlist if present</button>
     </div>
 </div>
-
-
-<div *ngIf="this.images" >
-    <div *ngFor="let image of images" >
-        <img src="{{image.url}}" height="image.height" width="image.width" />
-    </div>
-</div>
+   
