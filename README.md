@@ -3,6 +3,8 @@ Welcome to Lund's nr. 1 discography website!
 
 Here you can discover the discography of artsts, using the spotify API. The website is built in Angular using Angular Materials for styling and NgRX for state management
 
+![Welcome Screenshot](https://github.com/joelbengs/LAMEv2/blob/media/images/demo1.jpg?raw=true)
+
 ## Project Reflection
 This website was created as a group project in the course web programing, EDAF90, at Lund University.
 
