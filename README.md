@@ -5,10 +5,23 @@ Here you can discover the discography of artsts, using the spotify API. The webs
 
 ![Welcome Screenshot](https://github.com/joelbengs/LAMEv2/blob/media/images/demo1.jpg?raw=true)
 
-## Project Reflection
-This website was created as a group project in the course web programing, EDAF90, at Lund University.
+![Search for an artist](https://github.com/joelbengs/LAMEv2/blob/media/images/demo2.jpg?raw=true)
 
-Our initial goal was to create a fairly simple but functional version of the Spotify app. The webpage
+![Discography1](https://github.com/joelbengs/LAMEv2/blob/media/images/demo3.jpg?raw=true)
+
+![Discography2](https://github.com/joelbengs/LAMEv2/blob/media/images/demo4.jpg?raw=true)
+
+![Discography3](https://github.com/joelbengs/LAMEv2/blob/media/images/demo5.jpg?raw=true)
+
+![Album1](https://github.com/joelbengs/LAMEv2/blob/media/images/demo6.jpg?raw=true)
+
+![Album2](https://github.com/joelbengs/LAMEv2/blob/media/images/demo7.jpg?raw=true)
+
+![Playlist](https://github.com/joelbengs/LAMEv2/blob/media/images/demo8.jpg?raw=true)
+## Project Reflection
+This website was created as a group project in the course web programing, EDAF90, at Lund University. All four group members had no prior experience with Angular.
+
+Our initial goal was to create a fairly simple but functional version of the Spotify app, with focus on backend functionality. The webpage
 was supposed to include a search function, a discography view, a tracklist for the
 selected album and a playlist where the viewer can add and remove tracks. The app uses the public
 spotify API to attain information about artists, albums and tracks. We opted out of letting the user
@@ -16,7 +29,7 @@ sign in to spotify and instead used an access token generated from one of our ac
 We also thought of implementing a function that would allow the viewer to play the songs in the
 playlist but as we progressed we realized that this was out of scope for the project. There are some minor
 functionalities that did not turn out as expected, such as adaptive height on angular material
-elements (now the tracklist and playlist can overflow their respective containers), and non-fatal
+elements (now the tracklist and playlist can overflow their respective containers), and several non-fatal
 error messages in the console (often related to the API calls).
 
-Apart from that, the functionality that we initially wanted was successfully implemented
+Apart from that, the functionality that we initially wanted was successfully implemented.
