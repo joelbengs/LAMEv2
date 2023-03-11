@@ -1,7 +1,7 @@
 # Lund's Academic Music Ensycliopedia
 Welcome to Lund's nr. 1 discography website!
 
-Here you can discover the discography of artsts, using [Spotify's web API]/https://developer.spotify.com/documentation/web-api/). The website is built in Angular using Angular Materials for styling and NgRX for state management.
+Here you can discover the discography of artsts, using [Spotify's web API](https://developer.spotify.com/documentation/web-api/). The website is built in Angular using Angular Materials for styling and NgRX for state management.
 
 ## Demo
 
